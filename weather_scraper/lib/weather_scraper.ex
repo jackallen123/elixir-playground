@@ -2,9 +2,9 @@ defmodule WeatherScraper do
   @moduledoc """
 
   A simple module to fetch weather.com's homepage and extract footer text
+  """
 
   @url "https://weather.com"
-  """
 
   @doc """
   Fetches weather.com's homepage
@@ -52,7 +52,6 @@ defmodule WeatherScraper do
     else
       :not_found    -> :not_found
       {:error, reason} -> {:error, reason}
-
     end
   end
 end
