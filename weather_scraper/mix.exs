@@ -7,7 +7,8 @@ defmodule WeatherScraper.MixProject do
       version: "0.1.0",
       elixir: "~> 1.18",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      escript: [main_module: WeatherScraper.CLI]
     ]
   end
 
@@ -21,7 +22,11 @@ defmodule WeatherScraper.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
+      # {:dep_from_hexpm, "~> 0.3.0"},'
+      {:floki, "~> 0.34.0"},
+      {:httpoison, "~> 2.1"},
+      {:swoosh, "~> 1.10"},
+      {:gen_stage, "~> 1.2"}
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
   end
