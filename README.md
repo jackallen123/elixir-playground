@@ -1,1 +1,1 @@
-# elixir-playground
+small project to try and learn elixir
