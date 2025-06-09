@@ -11,3 +11,17 @@ $ cd weather_scraper
 $ mix deps.get
 $ mix compile
 ```
+
+3. Implemented scraping logic into `/lib/weather_scraper` and testing logic into `test/weather_scraper_test`
+
+4. Used mix to compile & test after making changes
+```bash
+$ mix compile
+$ mix test
+```
+
+5. To test without going to live site
+```bash
+$ mix compile
+$ mix test --exclude integration
+```
