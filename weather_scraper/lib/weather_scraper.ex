@@ -36,10 +36,17 @@ defmodule WeatherScraper do
     |> Floki.parse_document!()
     |> Floki.find("div.Footer--attribution--FK8dr span")
     |> case do
-      [{_, _, [text]}] -> {:ok, String.trim(text)}
-      _                -> :not_found
+      [{_, _, [text]}] ->
+        # print some details for debugging
+        IO.inspect(text, label: "Extracted footer text")     # => "Extracted footer text: © The Weather Company, LLC 2025"
+        {:ok, String.trim(text)}
+
+      _ ->
+        IO.puts("Footer span not found")
+        :not_found
     end
   end
+
 
   @doc """
   fetch + extract in one call
