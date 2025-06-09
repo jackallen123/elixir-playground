@@ -21,3 +21,6 @@ weather_scraper-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# ignore config/private.exs 
+/config/private.exs
