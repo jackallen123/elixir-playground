@@ -33,7 +33,7 @@ defmodule WeatherScraper do
   @spec extract_footer_text(String.t()) :: {:ok, String.t()} | :not_found
   def extract_footer_text(html) do
     html
-    |> Floki.parse_document()
+    |> Floki.parse_document!()
     |> Floki.find("div.Footer--attribution--FK8dr span")
     |> case do
       [{_, _, [text]}] -> {:ok, String.trim(text)}
