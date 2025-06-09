@@ -20,14 +20,11 @@ defmodule WeatherScraper.MixProject do
   end
 
   # Run "mix help deps" to learn about dependencies.
-  defp deps do
+    defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},'
-      {:floki, "~> 0.34.0"},
-      {:httpoison, "~> 2.1"},
-      {:swoosh, "~> 1.10"},
-      {:gen_stage, "~> 1.2"}
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:httpoison, "~> 2.0"},
+      {:floki,      "~> 0.34"},
+      {:ex_doc,     "~> 0.30", only: :dev, runtime: false}
     ]
   end
 end
